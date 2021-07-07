@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!--Lotteries number generator.
+This page include Lotto, OZ Lotto and Powerball-->
+<html>
+	<head>
+	<title>The Werewolves of Miller's Hollow </title>
+		<!--Any Comment-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <!--link rel="stylesheet" type="text/css" href="/stylesheets/main.css"-->
+	 <link rel="stylesheet" type="text/css" href="/stylesheets/wolf.css">
+	
+	<script type="text/javascript" src="/javascripts/ackUpload.js"> </script>
+	<script type="text/javascript" src="/javascripts/displayHistory.js"> </script>
+	<script type="text/javascript" src="/javascripts/askForSuggestion.js"> </script>
+	<style>
+		body {
+		  background-image: url('/images/bambuk-stebel-vetka-listya.jpg');
+		  background-repeat: no-repeat;
+		  background-attachment: fixed; 
+		  background-size: 100% 100%;
+		}
+		</style>
+	</head>
+
+	<body>
+		<table style="width:100%">
+			<tr>
+				<th></th>
+					<th bgcolor=#FEEFB3><b><h2><font color=#D8000C>Please input value for current known postion :W for wolf, F for farmer, G for God.</font></h2></b></th>
+				<th></th>
+			</tr>
+			<tr><th> </th></tr>
+		</table>
+		<div class="container">
+  			<!--<img src="/images/bambuk-stebel-vetka-listya.jpg" alt="Snow" style="width:100%;">-->
+			<table style="width:80%">
+				<tr style="color:black;">
+					<th >1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+					<th>8</th>
+					<th>9</th>
+					<th>10</th>
+					<th>11</th>
+					<th>12</th>
+				</tr>
+				<form action="/getSuggestion" method="post">
+				<tr>
+					<th><select id="var1" name="var1">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+						</select>
+					</th>
+					<th><select id="var2" name="var2">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+					</select>
+					</th>
+					<th><select id="var3" name="var3">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+					</select>
+					</th>
+					<th><select id="var4" name="var4">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+					</select>
+					</th>
+					<th><select id="var5" name="var5">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+					</select>
+					</th>
+					<th><select id="var6" name="var6">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+					</select>
+					</th>
+					<th><select id="var7" name="var7">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+					</select>
+					</th>
+					<th><select id="var8" name="var8">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+					</select>
+					</th>
+					<th><select id="var9" name="var9">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+					</select>
+					</th>
+					<th><select id="var10" name="var10">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+					</select>
+					</th>
+					<th><select id="var11" name="var11">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+					</th>
+				</select>
+					<th><select id="var12" name="var12">
+						<option value='N'>None</option>
+						<option value='W'>Wolf</option>
+						<option value='F'>Farmer</option>
+						<option value='G'>God</option>
+					</select>
+					</th>
+				</tr>
+				<tr></tr><tr></tr><tr></tr>
+				<tr>
+					<th></th><th></th><th></th><th></th><th></th>
+					<th colspan="2">
+					<button type="button" onclick="tellMe()">Show me</button>
+					</th>
+				</tr>
+				</form> 
+			</table>
+
+			<b><h2><font color=#D8000C>You can upload previous game result in table below :</font></h2></b>
+			<table style="width:80%">
+			<tr style="color:black;">
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+				<th>4</th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+			</tr>
+			<!--<form action="/upload" method="post">-->
+			<form>
+			<!--<input type="text" id="numOfGamesToPlay" size="28" name="inputs" value="">-->
+			<tr>
+				<th><select id="varU1" name="varU1">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+					</select>
+					<!--<button type="button" onclick="showAck()">UPload</button>-->
+				</th>
+				<th><select id="varU2" name="varU2">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+					</select>
+				</th>
+				<th><select id="varU3" name="varU3">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+				</select>
+				</th>
+				<th><select id="varU4" name="varU4">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+				</select>
+				</th>
+				<th><select id="varU5" name="varU5">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+				</select>
+				</th>
+				<th><select id="varU6" name="varU6">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+				</th>
+				<th><select id="varU7" name="varU7">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+				</th>
+				<th><select id="varU8" name="varU8">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+				</select>
+				</th>
+				<th><select id="varU9" name="varU9">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+				</select>
+				</th>
+				<th><select id="varU10" name="varU10">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+				</select>
+				</th>
+				<th><select id="varU11" name="varU11">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+				</select>
+				</th>
+				<th><select id="varU12" name="varU12">
+					<option value='N'>None</option>
+					<option value='W'>Wolf</option>
+					<option value='F'>Farmer</option>
+					<option value='G'>God</option>
+				</select>
+				</th>
+			</tr>
+			<tr></tr><tr></tr><tr></tr>
+			<tr>
+				<th></th><th></th><th></th><th></th><th></th>
+				<th colspan="2">
+				<!--<input type="submit" value="Upload">-->
+				
+				</th>
+			</tr>
+		</form>
+		<tr>
+			<th></th><th></th><th></th><th></th><th></th>
+		<th colspan="2">
+		<button type="button" onclick="showAck()">UPload</button>
+	    </th>
+	</tr>
+			<th></th><th></th><th></th><th></th><th></th>
+		<th colspan="2", style="color:black;">
+			<center id="postHint"></center>
+			<div id="postNubmers"></div>
+		</th>
+		</table>
+		<tr>
+			<th></th><th></th><th></th><th></th><th></th>
+		<th colspan="2">
+		<button type="button" onclick="displayH()">Show all History data</button>
+	    </th>
+	</tr>
+	<table style="width:80%">
+	<th></th><th></th><th></th><th></th><th></th>
+		<th colspan="2", style="color:black;">
+			<center id="hData"></center>
+			<div id="HistoryData"></div>
+		</th>
+	</table>
+	<table style="width:80%">
+		<th></th><th></th><th></th><th></th><th></th>
+			<th colspan="2", style="color:black;">
+				<center id="WelcomeM"></center>
+				<div id="Suggestions"></div>
+			</th>
+		</table>
+	</div>
+	</body>
+</html>
+
