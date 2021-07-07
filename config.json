@@ -1,0 +1,9 @@
+{
+    "development": {
+        "config_id": "development",
+        "app_name": "Wolf",
+        "app_desc": "Wolf desc",
+        "node_port": 3300,
+        "json_indentation": 4
+    }
+}
